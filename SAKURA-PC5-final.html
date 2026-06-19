@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)file:///C:/Users/sana2/Desktop/practice-git/SAKURA-PC5.html -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>築古住宅リフォーム手続きガイド - SAKURA（PC版5列表示）</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+
+        /* ヘッダー */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .header-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #667eea;
+        }
+
+        .header-subtitle {
+            font-size: 14px;
+            color: #999;
+        }
+
+        /* ナビゲーション */
+        .device-switch {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .device-btn {
+            padding: 10px 20px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .device-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        /* テーブルコンテナ */
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .timeline-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+
+        /* ヘッダー行 */
+        .timeline-table thead {
+            background: #667eea;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .timeline-table th {
+            padding: 14px 10px;
+            text-align: left;
+            font-weight: bold;
+            border-right: 1px solid rgba(255,255,255,0.2);
+            min-width: 120px;
+        }
+
+        .timeline-table th:last-child {
+            border-right: none;
+        }
+
+        /* ボディ行 */
+        .timeline-table tbody tr {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .timeline-table tbody tr:nth-child(odd) {
+            background: #fafafa;
+        }
+
+        .timeline-table tbody tr:hover {
+            background: #f0f4ff;
+        }
+
+        .timeline-table td {
+            padding: 12px 10px;
+            vertical-align: top;
+            border-right: 1px solid #e0e0e0;
+        }
+
+        .timeline-table td:last-child {
+            border-right: none;
+        }
+
+        /* ステップ番号列 */
+        .step-cell {
+            font-weight: bold;
+            background: #f0f4ff;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        /* カラム別スタイル */
+        .col-financing {
+            background-color: #f0f8ff;
+        }
+
+        .col-construction {
+            background-color: #fff8f0;
+        }
+
+        .col-inspection {
+            background-color: #f0fff0;
+        }
+
+        .col-seismic {
+            background-color: #fff8f8;
+        }
+
+        .col-subsidy {
+            background-color: #fffef0;
+        }
+
+        /* グレー塗（不要） */
+        .completed {
+            background-color: #f0f0f0 !important;
+            color: #999;
+            font-size: 11px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* テキスト */
+        .cell-title {
+            font-weight: bold;
+            font-size: 13px;
+            color: #333;
+            margin-bottom: 4px;
+        }
+
+        .cell-description {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 6px;
+        }
+
+        .cell-description small {
+            display: block;
+            font-size: 11px;
+            color: #999;
+            margin-top: 4px;
+            font-style: italic;
+        }
+
+        /* ボタン */
+        .btn-group {
+            display: flex;
+            gap: 4px;
+            margin-top: 6px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            font-size: 10px;
+            padding: 4px 8px;
+            border-radius: 3px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .btn-free {
+            background: #FFD6E8;
+            color: #d32f7f;
+        }
+
+        .btn-free:hover {
+            opacity: 0.8;
+        }
+
+        .btn-paid {
+            background: #003DA5;
+            color: white;
+        }
+
+        .btn-paid:hover {
+            opacity: 0.8;
+        }
+
+        /* フッター */
+        .footer {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .footer-text {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .footer-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-main {
+            padding: 12px 24px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-main:hover {
+            opacity: 0.8;
+        }
+
+        .btn-secondary {
+            padding: 12px 24px;
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background: #f0f4ff;
+        }
+
+        /* レジェンド */
+        .legend {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 6px;
+            font-size: 12px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-color {
+            width: 30px;
+            height: 20px;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+ <body>
+ <div class="container">
+  
+      <!-- ヘッダー -->
+        <div class="header">
+            <div class="header-title">築古住宅リフォーム手続きガイド</div>
+            <div class="header-subtitle">完全タイムスケジュール表 by SAKURA</div>
+        </div>
+
+        <!-- デバイス切り替え -->
+        <div class="device-switch">
+<button class="device-btn" onclick="window.location.href=&#39;SAKURA-sumaho-260518.html&#39;">
+    📱 スマホ版<br>（カラム別）
+  </button>
+
+  <button class="device-btn active">
+    💻 PC版<br>（5列全行程表示）
+  </button>
+  </div>
+
+        <!-- レジェンド -->
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: #f0f8ff;"></div>
+                <span>💰 融資手続き</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #fff8f0;"></div>
+                <span>🔨 工事工程</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #f0fff0;"></div>
+                <span>✅ 適合検査</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #fff8f8;"></div>
+                <span>📐 耐震診断</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #fffef0;"></div>
+                <span>🎁 補助金関連</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #f0f0f0;"></div>
+                <span>グレー = 不要</span>
+            </div>
+        </div>
+
+        <!-- テーブル -->
+        <div class="table-wrapper">
+            <table class="timeline-table">
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>💰 融資手続き</th>
+                        <th>🔨 工事工程</th>
+                        <th>✅ 適合検査</th>
+                        <th>📐 耐震診断</th>
+                        <th>🎁 補助金関連</th>
+                    </tr>
+                </thead>
+                <tbody>
+    <!-- STEP 1 -->
+    <tr>
+        <td class="step-cell">1</td>
+        <td class="col-financing">
+            <div class="cell-title">リフォーム計画の初期準備</div>
+            <div class="cell-description">予算イメージを確認<div class="btn-group"><button class="btn btn-free">詳細を見る（無料）</button></div></div>
+        </td>
+        <td class="col-construction">
+            <div class="cell-title">工事箇所の検討</div>
+            <div class="cell-description">工事内容の考え方の基本を理解する</div>
+            <div class="btn-group"><button class="btn btn-free">詳細を見る（無料）</button></div>
+            <div class="cell-description">見えない部分が70%。しっかり計画を立てる</div>
+            <div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div>
+        </td>
+        <td class="completed">-</td>
+        <td class="col-seismic">
+            <div class="cell-title">診断補助金制度の確認</div>
+            <div class="cell-description">耐震診断の補助金制度があるか市町村に確認<div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div></div>
+        </td>
+        <td class="completed">-</td>
+    </tr>
+
+   <!-- STEP 2 -->
+<tr>
+    <td class="step-cell">2</td>
+
+    <td class="col-financing">
+        <div class="cell-title">未登記家屋の確認</div>
+        <div class="cell-description">
+            未登記家屋の登記依頼
+            <div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div>
+        </div>
+    </td>
+
+    <td class="col-construction">
+        <div class="cell-title">工務店選び</div>
+        <div class="cell-description">
+            複数工務店の比較検討
+            <div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div>
+        </div>
+    </td>
+
+    <td class="completed">-</td>
+
+    <!-- ★ 修正した耐震診断欄（説明文＋遷移ボタン削除） -->
+    <td class="col-seismic">
+        <div class="cell-title">診断士の選定・予約</div>
+        <div class="cell-description">
+            <!-- 説明文・遷移ボタンを削除し、空欄にしています -->
+        </div>
+    </td>
+
+    <td class="completed">-</td>
+</tr>
+
+    <!-- STEP 3 -->
+    <tr>
+        <td class="step-cell">3</td>
+        <td class="completed">待機中</td>
+        <td class="col-construction">-</td>
+        <td class="completed">-</td>
+        <td class="col-seismic">
+            <div class="cell-title">耐震診断 現地調査実施</div>
+            <div class="cell-description">診断士が現地で診断を実施</div>
+        </td>
+        <td class="completed">-</td>
+    </tr>
+
+    <!-- STEP 4 -->
+    <tr>
+        <td class="step-cell">4</td>
+        <td class="completed">待機中</td>
+        <td class="col-construction">
+            <div class="cell-title">商品選定・見積もりプラン作成</div>
+            <div class="cell-description">工務店と一緒に商品を選定<div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div></div>
+        </td>
+        <td class="completed">-</td>
+        <td class="col-seismic">
+            <div class="cell-title">診断結果＆補強プラン作成</div>
+            <div class="cell-description">診断結果と補強プランが作成される<div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div></div>
+        </td>
+        <td class="col-subsidy">
+            <div class="cell-title">補助金対象商品確認</div>
+            <div class="cell-description">補助金対象品番を確認<div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div></div>
+        </td>
+    </tr>
+
+    <!-- STEP 5 -->
+    <tr>
+        <td class="step-cell">5</td>
+        <td class="col-financing">
+            <div class="cell-title">機構カスタマーセンターに相談</div>
+            <div class="cell-description">融資申請検討を申し出</div>
+        </td>
+        <td class="col-construction">
+            <div class="cell-title">見積もり精査→確定</div>
+            <div class="cell-description">見積もりの詳細を確認し最終確定<div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div></div>
+        </td>
+        <td class="col-inspection">
+            <div class="cell-title">適合検査機関の選定</div>
+            <div class="cell-description">適合検査って何？</div>
+            <div class="btn-group"><button class="btn btn-free">詳細を見る（無料）</button></div>
+            <div class="cell-description">機構指定の適合証明機関を調査</div>
+            <div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div>
+        </td>
+        <!-- 耐震診断：STEP5 → STEP7 に移動するので空欄 -->
+        <td class="completed">-</td>
+        <td class="completed">-</td>
+    </tr>
+
+    <!-- STEP 6 -->
+    <tr>
+        <td class="step-cell">6</td>
+        <td class="col-financing">
+            <div class="cell-title">融資申請書作成＆提出</div>
+            <div class="cell-description">機構から申請書が郵送→作成→提出<div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div><div class="period-badge">2～3週間</div></div>
+        </td>
+        <td class="col-construction">
+    <div class="cell-title">着工前準備</div>
+    <div class="cell-description">
+        クロスや床材の変更可能か最終確認
+        <div class="btn-group">
+            <button class="btn btn-paid" onclick="location.href='STEP6-kouji.html'">詳細を見る</button>
+        </div>
+    </div>
+</td>
+        <td class="col-inspection">
+            <div class="cell-title">適合検査依頼→申請</div>
+            <div class="cell-description">機構指定の適合証明機関に検査依頼<div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div></div>
+        </td>
+        <!-- 耐震診断：STEP6 → STEP8 に移動するので空欄 -->
+        <td class="completed">-</td>
+        <td class="col-subsidy">
+            <div class="cell-title">補助金申請準備</div>
+            <div class="cell-description">工務店が補助金申請の準備を進める</div>
+        </td>
+    </tr>
+
+    <!-- STEP 7 -->
+    <tr>
+        <td class="step-cell">7</td>
+        <td class="col-financing">
+            <div class="cell-title">融資承認</div>
+            <div class="cell-description">融資承認通知書到着<div class="period-badge">1～2週間</div></div>
+        </td>
+        <td class="col-construction">
+            <div class="cell-title">⚠️ 工事着工【最重要】</div>
+            <div class="cell-description">工事計画確認報告書到着後、初めて着工OK<div class="btn-group"><button class="btn btn-free">【重要】詳細を見る（無料）</button></div></div>
+        </td>
+        <td class="completed">-</td>
+        <!-- 耐震診断：ここに元STEP5の内容を移動 -->
+        <td class="col-seismic">
+            <div class="cell-title">診断費用支払い</div>
+            <div class="cell-description">耐震診断の費用を支払う</div>
+        </td>
+        <td class="completed">-</td>
+    </tr>
+
+    <!-- STEP 8 -->
+    <tr>
+        <td class="step-cell">8</td>
+        <td class="completed">待機中</td>
+        <td class="col-construction">
+            <div class="cell-title">工事施工＋写真撮影</div>
+            <div class="cell-description">補強箇所の工事前・工事中写真を撮影<div class="btn-group"><button class="btn btn-paid">【重要】詳細を見る</button></div><div class="period-badge">1～3ヶ月</div></div>
+        </td>
+        <td class="col-inspection">
+            <div class="cell-title">検査準備</div>
+            <div class="cell-description">工事進捗を監視。検査日を調整</div>
+        </td>
+        <!-- 耐震診断：ここに元STEP6の内容を移動 -->
+        <td class="col-seismic">
+            <div class="cell-title">耐震補強工事実施</div>
+            <div class="cell-description">診断結果に基づいて補強を実施</div>
+        </td>
+        <td class="col-subsidy">
+            <div class="cell-title">補助金申請</div>
+            <div class="cell-description">補助金申請書提出</div>
+        </td>
+    </tr>
+
+    <!-- STEP 9 -->
+    <tr>
+        <td class="step-cell">9</td>
+        <td class="completed">待機中</td>
+        <td class="completed">施工中</td>
+        <td class="col-inspection">
+            <div class="cell-title">現地検査日決定・検査代金支払い</div>
+            <div class="cell-description">現地検査の日程を決定し代金を支払う</div>
+        </td>
+        <td class="completed">-</td>
+        <td class="col-subsidy">
+            <div class="cell-title">補助金承認</div>
+            <div class="cell-description">補助金の入金方法確認<div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div></div>
+        </td>
+    </tr>
+
+    <!-- STEP 10 -->
+   <tr>
+    <td class="step-cell">10</td>
+    <td class="completed">連絡中</td>
+
+<td class="col-construction">
+    <div class="cell-title">工事完了</div>
+    <div class="cell-description">
+        工事が完了し、最終確認を行う
+        <div style="height: 1px;"></div>
+    </div>
+</td>
+
+
+    <td class="col-inspection">
+        <div class="cell-title">適合検査実施</div>
+        <div class="cell-description">検査機関が現地確認。写真が重要</div>
+    </td>
+
+    <td class="completed"></td>
+    <td class="completed"></td>
+</tr>
+
+    <!-- STEP 11 -->
+    <tr>
+        <td class="step-cell">11</td>
+        <td class="completed">待機中</td>
+        <td class="completed">施工中</td>
+        <td class="col-inspection">
+            <div class="cell-title">適合証明書到着待ち</div>
+            <div class="cell-description">検査機関から適合証明書郵送待ち</div>
+        </td>
+        <td class="completed">-</td>
+        <td class="completed">-</td>
+    </tr>
+
+    <!-- STEP 12 -->
+    <tr>
+        <td class="step-cell">12</td>
+        <td class="completed">待機中</td>
+        <td class="completed">施工中</td>
+        <td class="col-inspection">
+            <div class="cell-title">適合証明書到着</div>
+        </td>
+        <td class="completed">-</td>
+        <td class="completed">-</td>
+    </tr>
+
+    <!-- STEP 13 -->
+    <tr>
+        <td class="step-cell">13</td>
+        <td class="col-financing">
+            <div class="cell-title">金消契約準備</div>
+            <div class="cell-description">適合証明書到着を報告。融資承認通知書の金消契約期限までに設定<div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div><div class="period-badge">1日</div></div>
+        </td>
+        <td class="completed">完了</td>
+        <td class="completed">完了</td>
+        <td class="completed">完了</td>
+        <td class="completed">-</td>
+    </tr>
+
+    <!-- STEP 14 -->
+    <tr>
+        <td class="step-cell">14</td>
+        <td class="col-financing">
+            <div class="cell-title">金消契約を結ぶ</div>
+            <div class="cell-description">窓口銀行で融資契約締結<div class="period-badge">1～2週間</div></div>
+        </td>
+        <td class="completed">完了</td>
+        <td class="completed">完了</td>
+        <td class="completed">完了</td>
+        <td class="completed">-</td>
+    </tr>
+
+    <!-- STEP 15 -->
+    <tr>
+        <td class="step-cell">15</td>
+        <td class="col-financing">
+            <div class="cell-title">融資金が入金される</div>
+            <div class="cell-description">指定の銀行口座へ振込<div class="period-badge">数日～1週間</div></div>
+        </td>
+        <td class="completed">完了</td>
+        <td class="completed">完了</td>
+        <td class="completed">完了</td>
+        <td class="completed">-</td>
+    </tr>
+
+    <!-- STEP 16 -->
+   <tr>
+    <td class="step-cell">16</td>
+
+    <!-- 融資 -->
+    <td class="col-financing">
+        <div class="cell-title">🎉 融資返済開始</div>
+        <div class="cell-description">返済初月は、契約月の翌月or翌々月。契約書で確認が必須</div>
+    </td>
+
+    <!-- 工事 -->
+    <td class="completed">完了</td>
+
+    <!-- 適合検査 -->
+    <td class="completed">完了</td>
+
+    <!-- 耐震診断 -->
+    <td class="completed">完了</td>
+
+    <!-- 補助金（ここに補助金受取を入れるのが正しい） -->
+    <td class="col-subsidy">
+        <div class="cell-title">🎉 補助金受取</div>
+        <div class="cell-description">
+            入金タイミングを施工業者に確認。完工後数か月後もあり
+            <div class="btn-group"><button class="btn btn-free">詳細（無料）</button></div>
+        </div>
+    </td>
+</tr>
+</tbody>
+
+            </table>
+        </div>
+
+        <!-- フッター -->
+        <div class="footer">
+            <div class="footer-text">
+                <strong>📌 さらに詳しく学びたい方へ</strong><br>
+                各ステップの詳細記事は「詳細を見る」ボタンから購入できます。noteプラットフォームで販売中。
+            </div>
+            <div class="footer-buttons">
+                <button class="btn-main" onclick="alert(&#39;✨ noteの購入ページへ遷移します&#39;)">📖 記事一覧を見る</button>
+                <button class="btn-secondary" onclick="window.location.href=&#39;SAKURA-sumaho.html&#39;">📱 スマホ版に切り替え</button>
+
+            </div>
+        </div>
+    </div>
+
+
+</body></html>

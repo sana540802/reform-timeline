@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<!-- saved from url=(0239)file:///C:/Users/sana2/Downloads/%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E8%A1%A8_%E3%82%B9%E3%83%9E%E3%83%9B%E7%89%88_%E3%82%AB%E3%83%A9%E3%83%A0%E5%88%A5%E7%89%88_%E6%9C%80%E6%96%B0%E7%89%88.html -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>築古住宅リフォーム手続きガイド - SAKURA（スマホ版）</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.column-content-wrapper {
+    display: none;
+}
+
+.column-content-wrapper.active {
+    display: block;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    font-size: 15px; /* 全体の基準フォントを拡大 */
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    min-height: 100vh;
+}
+
+/* ヘッダー */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 24px 18px; /* 少し広げて見やすく */
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.header-title {
+    font-size: 22px; /* 18 → 22 */
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.header-subtitle {
+    font-size: 14px; /* 12 → 14 */
+    opacity: 0.9;
+}
+
+/* デバイス切り替え */
+.device-switch {
+    display: flex;
+    gap: 10px;
+    padding: 14px 16px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #e0e0e0;
+    justify-content: center;
+}
+
+.device-btn {
+    padding: 10px 18px; /* 押しやすく */
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 6px;
+    font-size: 14px; /* 12 → 14 */
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.device-btn.active {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+/* コンテンツ */
+.content {
+    padding: 18px;
+}
+
+.intro-section {
+    background: #f0f4ff;
+    border-left: 4px solid #667eea;
+    padding: 14px;
+    border-radius: 4px;
+    margin-bottom: 22px;
+    font-size: 15px; /* 13 → 15 */
+    line-height: 1.8;
+    color: #555;
+}
+
+/* カラムタブ */
+.column-tabs {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    margin-bottom: 22px;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.column-tab {
+    padding: 12px 18px; /* 押しやすく */
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    font-size: 14px; /* 12 → 14 */
+    background: white;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+    font-weight: 600;
+}
+
+.column-tab.active {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+.timeline-column {
+    display: none;
+}
+.timeline-column.active {
+    display: block;
+}
+
+
+/* ステップブロック */
+.step-block {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 18px; /* 14 → 18 */
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.step-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.step-title {
+    font-size: 16px; /* 13 → 16 */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.step-action {
+    font-size: 14px; /* 12 → 14 */
+    color: #555;
+    line-height: 1.7;
+}
+
+/* 矢印 */
+.step-divider {
+    text-align: center;
+    font-size: 32px; /* 28 → 32 */
+    color: #667eea;
+    margin: 14px 0;
+    font-weight: 900;
+    line-height: 1;
+}
+
+/* ボタン */
+.button-group {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    font-size: 13px; /* 11 → 13 */
+    padding: 8px 14px; /* 押しやすく */
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-free {
+    background: #FFD6E8;
+    color: #d32f7f;
+}
+
+.btn-paid {
+    background: #003DA5;
+    color: white;
+}
+
+/* バッジ */
+.status-badge {
+    display: inline-block;
+    background: #f0f0f0;
+    color: #999;
+    padding: 5px 8px;
+    border-radius: 3px;
+    font-size: 12px; /* 10 → 12 */
+    font-weight: bold;
+    margin-left: 4px;
+}
+
+/* タイムスケール */
+.timeline-scale {
+    background: #f9f9f9;
+    padding: 14px;
+    border-radius: 6px;
+    margin-top: 12px;
+    font-size: 13px; /* 11 → 13 */
+    color: #666;
+    border-left: 3px solid #667eea;
+}
+
+/* フッター */
+.footer {
+    padding: 22px 16px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    background: #f9f9f9;
+}
+
+.footer-text {
+    font-size: 14px; /* 12 → 14 */
+    color: #999;
+    margin-bottom: 14px;
+    line-height: 1.7;
+}
+
+.btn-main {
+    padding: 14px 18px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px; /* 14 → 15 */
+    font-weight: bold;
+}
+
+.btn-secondary {
+    padding: 12px 18px;
+    background: white;
+    color: #667eea;
+    border: 2px solid #667eea;
+    border-radius: 6px;
+    font-size: 14px; /* 13 → 14 */
+    font-weight: bold;
+}
+
+           </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ヘッダー -->
+        <div class="header">
+            <div class="header-title">築古住宅リフォーム手続き</div>
+            <div class="header-subtitle">完全ガイド by SAKURA</div>
+        </div>
+
+        <!-- デバイス切り替え -->
+       <div class="device-switch">
+ <button class="device-btn active">
+    📱 スマホ版<br>（カラム別）
+  </button>
+
+  <button class="device-btn" onclick="window.location.href='SAKURA-PC5-final.html'">
+    💻 PC版<br>（5列全行程表示）
+  </button>
+</div>
+
+        <!-- コンテンツ -->
+        <div class="content">
+            <div class="intro-section">
+                <strong>📌 使い方</strong><br>
+                下の5つのカラムから、あなたが知りたい分野をタップして選択。各ステップの具体的な手続きを確認できます。
+            </div>
+
+           <!-- カラムタブ -->
+<div class="column-tabs">
+    <button class="column-tab active" onclick="showColumn(0)">💰 融資手続き</button>
+    <button class="column-tab" onclick="showColumn(1)">🔨 工事工程</button>
+    <button class="column-tab" onclick="showColumn(2)">✅ 適合検査</button>
+    <button class="column-tab" onclick="showColumn(3)">📐 耐震診断</button>
+    <button class="column-tab" onclick="showColumn(4)">🎁 補助金関連</button>
+</div>
+
+   
+ <!-- 融資の内容 -->
+<!-- カラム0 融資手続き -->
+<div class="timeline-column active" id="column-0">
+
+
+    <!-- STEP1 -->
+    <div class="step-block">
+        <div class="step-title">STEP1｜リフォーム計画の初期準備</div>
+        <div class="step-description">
+            予算イメージを確認
+            <div class="btn-group"><button class="btn btn-free">詳細を見る（無料）</button></div>
+        </div>
+    </div>
+
+    <!-- STEP2 -->
+    <div class="step-block">
+        <div class="step-title">STEP2｜未登記家屋の確認</div>
+        <div class="step-description">
+            未登記家屋の登記依頼
+            <div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div>
+        </div>
+    </div>
+
+    <!-- STEP3：内容なし → 除外 -->
+
+    <!-- STEP4：内容なし → 除外 -->
+
+    <!-- STEP5 -->
+    <div class="step-block">
+        <div class="step-title">STEP5｜機構カスタマーセンターに相談</div>
+        <div class="step-description">融資申請検討を申し出</div>
+    </div>
+
+    <!-- STEP6 -->
+    <div class="step-block">
+        <div class="step-title">STEP6｜融資申請書作成＆提出</div>
+        <div class="step-description">
+            機構から申請書が郵送→作成→提出
+            <div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div>
+            <div class="period-badge">2～3週間</div>
+        </div>
+    </div>
+
+    <!-- STEP7 -->
+    <div class="step-block">
+        <div class="step-title">STEP7｜融資承認</div>
+        <div class="step-description">
+            融資承認通知書到着
+            <div class="period-badge">1～2週間</div>
+        </div>
+    </div>
+
+    <!-- STEP8：内容なし → 除外 -->
+
+    <!-- STEP9：内容なし → 除外 -->
+
+    <!-- STEP10：内容なし → 除外 -->
+
+    <!-- STEP11：内容なし → 除外 -->
+
+    <!-- STEP12：内容なし → 除外 -->
+
+    <!-- STEP13 -->
+    <div class="step-block">
+        <div class="step-title">STEP13｜金消契約準備</div>
+        <div class="step-description">
+            適合証明書到着を報告。融資承認通知書の金消契約期限までに設定
+            <div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div>
+            <div class="period-badge">1日</div>
+        </div>
+    </div>
+
+    <!-- STEP14 -->
+    <div class="step-block">
+        <div class="step-title">STEP14｜金消契約を結ぶ</div>
+        <div class="step-description">
+            窓口銀行で融資契約締結
+            <div class="period-badge">1～2週間</div>
+        </div>
+    </div>
+
+    <!-- STEP15 -->
+    <div class="step-block">
+        <div class="step-title">STEP15｜融資金が入金される</div>
+        <div class="step-description">
+            指定の銀行口座へ振込
+            <div class="period-badge">数日～1週間</div>
+        </div>
+    </div>
+
+    <!-- STEP16 -->
+    <div class="step-block">
+        <div class="step-title">STEP16｜🎉 融資返済開始</div>
+        <div class="step-description">
+            返済初月は、契約月の翌月or翌々月。契約書で確認が必須
+        </div>
+    </div>
+
+ </div>
+
+
+
+
+    <!-- 工事工程の内容 -->
+<!-- カラム1 工事工程 -->
+<div class="timeline-column" id="column-1">
+
+    <!-- STEP1 -->
+    <div class="step-block">
+        <div class="step-title">STEP1｜工事箇所の検討</div>
+        <div class="step-description">
+            工事内容の考え方の基本を理解する
+        </div>
+        <div class="step-description">
+            見えない部分が70%。しっかり計画を立てる
+        </div>
+        <div class="btn-group"><button class="btn btn-free">詳細を見る（無料）</button></div>
+        <div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div>
+    </div>
+
+    <!-- STEP2 -->
+    <div class="step-block">
+        <div class="step-title">STEP2｜工務店選び</div>
+        <div class="step-description">
+            複数工務店の比較検討
+            <div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div>
+        </div>
+    </div>
+
+    <!-- STEP3：工事工程なし → 非表示 -->
+
+    <!-- STEP4 -->
+    <div class="step-block">
+        <div class="step-title">STEP4｜商品選定・見積もりプラン作成</div>
+        <div class="step-description">
+            工務店と一緒に商品を選定
+            <div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div>
+        </div>
+    </div>
+
+    <!-- STEP5 -->
+    <div class="step-block">
+        <div class="step-title">STEP5｜見積もり精査→確定</div>
+        <div class="step-description">
+            見積もりの詳細を確認し最終確定
+            <div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div>
+        </div>
+    </div>
+
+   <!-- STEP6 -->
+<div class="step-block">
+    <div class="step-title">STEP6｜着工前準備</div>
+    <div class="step-description">
+        クロスや床材の変更可能か最終確認
+        <div class="btn-group">
+            <button class="btn btn-paid" onclick="location.href='STEP6-kouji.html'">詳細を見る</button>
+        </div>
+    </div>
+</div>
+
+    <!-- STEP7 -->
+    <div class="step-block">
+        <div class="step-title">STEP7｜⚠️ 工事着工【最重要】</div>
+        <div class="step-description">
+            工事計画確認報告書到着後、初めて着工OK
+            <div class="btn-group"><button class="btn btn-free">【重要】詳細を見る（無料）</button></div>
+        </div>
+    </div>
+
+    <!-- STEP8 -->
+    <div class="step-block">
+        <div class="step-title">STEP8｜工事施工＋写真撮影</div>
+        <div class="step-description">
+            補強箇所の工事前・工事中写真を撮影
+            <div class="btn-group"><button class="btn btn-paid">【重要】詳細を見る</button></div>
+            <div class="period-badge">1～3ヶ月</div>
+        </div>
+    </div>
+
+    <!-- STEP9：工事工程は「施工中」だけ → 非表示 -->
+
+    <!-- STEP10 -->
+    <div class="step-block">
+        <div class="step-title">STEP10｜工事完了</div>
+        <div class="step-description">
+            工事が完了し、最終確認を行う
+        </div>
+    </div>
+
+    <!-- STEP11：施工中 → 非表示 -->
+    <!-- STEP12：施工中 → 非表示 -->
+    <!-- STEP13：完了 → 非表示 -->
+    <!-- STEP14：完了 → 非表示 -->
+    <!-- STEP15：完了 → 非表示 -->
+    <!-- STEP16：完了 → 非表示 -->
+
+</div>
+
+
+
+    <!-- 適合検査の内容 -->
+<!-- カラム2 適合検査 -->
+<div class="timeline-column" id="column-2">
+
+
+    <!-- STEP5 -->
+    <div class="step-block">
+        <div class="step-title">STEP5｜適合検査機関の選定</div>
+        <div class="step-description">
+            適合検査って何？
+            <div class="btn-group"><button class="btn btn-free">詳細を見る（無料）</button></div>
+        </div>
+        <div class="step-description">
+            機構指定の適合証明機関を調査
+            <div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div>
+        </div>
+    </div>
+
+    <!-- STEP6 -->
+    <div class="step-block">
+        <div class="step-title">STEP6｜適合検査依頼→申請</div>
+        <div class="step-description">
+            機構指定の適合証明機関に検査依頼
+            <div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div>
+        </div>
+    </div>
+
+    <!-- STEP7：適合検査欄は空欄 → 非表示 -->
+
+    <!-- STEP8 -->
+    <div class="step-block">
+        <div class="step-title">STEP8｜検査準備</div>
+        <div class="step-description">
+            工事進捗を監視。検査日を調整
+        </div>
+    </div>
+
+    <!-- STEP9 -->
+    <div class="step-block">
+        <div class="step-title">STEP9｜現地検査日決定・検査代金支払い</div>
+        <div class="step-description">
+            現地検査の日程を決定し代金を支払う
+        </div>
+    </div>
+
+    <!-- STEP10 -->
+    <div class="step-block">
+        <div class="step-title">STEP10｜適合検査実施</div>
+        <div class="step-description">
+            検査機関が現地確認。写真が重要
+        </div>
+    </div>
+
+    <!-- STEP11 -->
+    <div class="step-block">
+        <div class="step-title">STEP11｜適合証明書到着待ち</div>
+        <div class="step-description">
+            検査機関から適合証明書郵送待ち
+        </div>
+    </div>
+
+    <!-- STEP12 -->
+    <div class="step-block">
+        <div class="step-title">STEP12｜適合証明書到着</div>
+        <div class="step-description">
+            （証明書が到着したタイミング）
+        </div>
+    </div>
+
+    <!-- STEP13〜16：適合検査欄は完了 or 空欄 → 非表示 -->
+
+</div>
+
+
+
+  <!-- 耐震診断の内容 -->
+<!-- カラム3 耐震診断 -->
+<div class="timeline-column" id="column-3">
+
+    <!-- STEP1 -->
+    <div class="step-block">
+        <div class="step-title">STEP1｜診断補助金制度の確認</div>
+        <div class="step-description">
+            耐震診断の補助金制度があるか市町村に確認
+            <div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div>
+        </div>
+    </div>
+
+    <!-- STEP2（説明文・遷移ボタン削除済） -->
+    <div class="step-block">
+        <div class="step-title">STEP2｜診断士の選定・予約</div>
+        <div class="step-description">
+            <!-- 説明文・遷移ボタンを削除し空欄にしています -->
+        </div>
+    </div>
+
+    <!-- STEP3 -->
+    <div class="step-block">
+        <div class="step-title">STEP3｜耐震診断 現地調査実施</div>
+        <div class="step-description">
+            診断士が現地で診断を実施
+        </div>
+    </div>
+
+    <!-- STEP4 -->
+    <div class="step-block">
+        <div class="step-title">STEP4｜診断結果＆補強プラン作成</div>
+        <div class="step-description">
+            診断結果と補強プランが作成される
+            <div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div>
+        </div>
+    </div>
+
+    <!-- STEP5：耐震診断欄は空欄 → 非表示 -->
+
+    <!-- STEP6：耐震診断欄は空欄 → 非表示 -->
+
+    <!-- STEP7（元STEP5） -->
+    <div class="step-block">
+        <div class="step-title">STEP7｜診断費用支払い</div>
+        <div class="step-description">
+            耐震診断の費用を支払う
+        </div>
+    </div>
+
+    <!-- STEP8（元STEP6） -->
+    <div class="step-block">
+        <div class="step-title">STEP8｜耐震補強工事実施</div>
+        <div class="step-description">
+            診断結果に基づいて補強を実施
+        </div>
+    </div>
+
+    <!-- STEP9：耐震診断欄は空欄 → 非表示 -->
+    <!-- STEP10：耐震診断欄は空欄 → 非表示 -->
+    <!-- STEP11：耐震診断欄は空欄 → 非表示 -->
+    <!-- STEP12：耐震診断欄は空欄 → 非表示 -->
+    <!-- STEP13：完了 → 非表示 -->
+    <!-- STEP14：完了 → 非表示 -->
+    <!-- STEP15：完了 → 非表示 -->
+    <!-- STEP16：完了 → 非表示 -->
+
+</div>
+
+
+
+
+    <!-- 補助金の内容 -->
+<!-- カラム4 補助金関連 -->
+<div class="timeline-column" id="column-4">
+
+    <!-- STEP4 -->
+    <div class="step-block">
+        <div class="step-title">STEP4｜補助金対象商品確認</div>
+        <div class="step-description">
+            補助金対象品番を確認
+            <div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div>
+        </div>
+    </div>
+
+    <!-- STEP5：補助金欄は空欄 → 非表示 -->
+
+    <!-- STEP6 -->
+    <div class="step-block">
+        <div class="step-title">STEP6｜補助金申請準備</div>
+        <div class="step-description">
+            工務店が補助金申請の準備を進める
+        </div>
+    </div>
+
+    <!-- STEP7：補助金欄は空欄 → 非表示 -->
+
+    <!-- STEP8 -->
+    <div class="step-block">
+        <div class="step-title">STEP8｜補助金申請</div>
+        <div class="step-description">
+            補助金申請書提出
+        </div>
+    </div>
+
+    <!-- STEP9 -->
+    <div class="step-block">
+        <div class="step-title">STEP9｜補助金承認</div>
+        <div class="step-description">
+            補助金の入金方法確認
+            <div class="btn-group"><button class="btn btn-paid">詳細を見る</button></div>
+        </div>
+    </div>
+
+    <!-- STEP10：補助金欄は空欄 → 非表示 -->
+    <!-- STEP11：補助金欄は空欄 → 非表示 -->
+    <!-- STEP12：補助金欄は空欄 → 非表示 -->
+    <!-- STEP13：完了 → 非表示 -->
+    <!-- STEP14：完了 → 非表示 -->
+    <!-- STEP15：完了 → 非表示 -->
+
+    <!-- STEP16 -->
+    <div class="step-block">
+        <div class="step-title">STEP16｜🎉 補助金受取</div>
+        <div class="step-description">
+            入金タイミングを施工業者に確認。完工後数か月後もあり
+            <div class="btn-group"><button class="btn btn-free">詳細（無料）</button></div>
+        </div>
+    </div>
+
+</div>
+
+          
+
+        <!-- フッター -->
+        <div class="footer">
+            <div class="footer-text">
+                <strong>📌 さらに詳しく学びたい方へ</strong><br>
+                各ステップの詳細記事は「詳細を見る」ボタンから購入できます。
+            </div>
+            <div class="footer-buttons">
+                <button class="btn-main" onclick="alert(&#39;✨ noteの購入ページへ遷移します&#39;)">📖 記事一覧を見る</button>
+                <button class="btn-secondary" onclick="openPCVersion()">💻 PC版５列全行程表示</button>
+            </div>
+        </div>
+    </div>
+
+  <script>
+function showColumn(index) {
+    document.querySelectorAll('.timeline-column').forEach(col => {
+        col.classList.remove('active');
+    });
+    document.getElementById('column-' + index).classList.add('active');
+
+    document.querySelectorAll('.column-tab').forEach(tab => {
+        tab.classList.remove('active');
+    });
+    document.querySelectorAll('.column-tab')[index].classList.add('active');
+}
+
+function openPCVersion() {
+    window.location.href = 'SAKURA-PC5.html';
+}
+
+window.addEventListener('load', function() {
+    console.log('📅 スマホ版（カラム分）タイムスケジュール表が読み込まれました！');
+});
+</script>
+</body></html>
